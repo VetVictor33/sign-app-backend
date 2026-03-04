@@ -29,7 +29,8 @@ docker-compose.yml
 ### Pré-requisitos
 
 - Node.js 20.19.0+
-- Docker e Docker Compose
+- PostgreSQL 15+ (via Docker Compose ou instalado localmente)
+- Docker e Docker Compose (recomendado)
 
 ### Instalação
 
