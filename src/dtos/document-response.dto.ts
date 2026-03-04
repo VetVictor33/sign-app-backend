@@ -7,12 +7,12 @@ export class DocumentResponseDto {
   status: string;
   criadoEm: Date;
 
-  constructor(partial: Partial<Documento>) {
-    this.id = partial.id!;
-    this.titulo = partial.titulo!;
-    this.descricao = partial.descricao!;
-    this.status = partial.status!;
-    this.criadoEm = partial.criado_em!;
+  constructor(partial: Documento) {
+    this.id = partial.id;
+    this.titulo = partial.titulo;
+    this.descricao = partial.descricao;
+    this.status = partial.status;
+    this.criadoEm = partial.criado_em;
   }
 
   static fromEntity(entity: Documento): DocumentResponseDto {
