@@ -1,8 +1,14 @@
 import { z } from "zod";
 
 export const createDocumentSchema = z.object({
-  titulo: z.string().min(1, "Título é obrigatório"),
-  descricao: z.string().min(1, "Descrição é obrigatória"),
+  titulo: z
+    .string()
+    .min(1, "Título é obrigatório")
+    .max(256, "Título deve ter no máximo 256 caracteres"),
+  descricao: z
+    .string()
+    .min(1, "Descrição é obrigatória")
+    .max(256, "Descrição deve ter no máximo 256 caracteres"),
 });
 
 export const updateStatusSchema = z.object({
