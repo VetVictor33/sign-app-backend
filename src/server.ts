@@ -22,7 +22,10 @@ const server: FastifyInstance = Fastify({
   disableRequestLogging: true,
 });
 
-server.register(cors);
+server.register(cors, {
+  origin: true,
+  methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
+});
 registerErrorHandler(server);
 
 await registerRoutes(server);
